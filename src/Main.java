@@ -6,16 +6,7 @@ public class Main {
      int n = sc.nextInt();
      char[] c = sc.next().toCharArray();
      int cnt = 0,ans = 0;
-     for(char cc:c) {
-    	 if(cc=='0') {
-    		 ans += cnt + 1;
-    		 
-    	 }else if(((cc-'0')&1)==1) {
-    		 
-    	 }else {
-    		 
-    	 }
-     }
+   
      sc.close();
     }
     
