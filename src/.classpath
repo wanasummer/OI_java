@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="acwing"/>
 	<classpathentry kind="src" path="cf"/>
 	<classpathentry kind="src" path="lanqiao"/>
+	<classpathentry kind="src" path="nowcoder"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
