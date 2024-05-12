@@ -8,40 +8,15 @@ public class Main {
 		int t = sc.nextInt();
 		while(t-->0) {
 			String s = sc.next();
-			char[] c = s.toCharArray();
-			int[] cor = findLongest(c);
-			for(int i = 0;i<c.length;i++) {
-				if(i==cor[0]||i==cor[1])continue;
-				
+			int ZO = 0;
+			int res = 1;
+			for(int i = 1;i<s.length();i++) {
+				if(s.charAt(i)!=s.charAt(i-1))res++;
+				if(s.charAt(i)=='1'&&s.charAt(i-1)=='0')ZO = 1;
 			}
+			System.out.println(res-ZO);
 		}
 		sc.close();
 	}
-	static int[] findLongest(char[] c) {
-		int max = 0;
-		int[] cor = new int[2];
-		int l = 0,r = 0;
-		boolean hasOne = false;
-		for(;r<c.length;r++) {
-			if(c[r]=='1') {
-				hasOne = true;
-			}
-			if(hasOne&&c[r]=='0') {
-				if(r-l>max) {
-					max = r-l;
-					cor[0] = l;cor[1] = r;
-					l = r;
-				}
-				hasOne = false;
-			}
-		}
-		if(hasOne) {
-			if(r-l>max) {
-				max = r-l;
-				cor[0] = l;cor[1] = r;
-				l = r;
-			}
-		}
-		return cor;
-	}
+	
 }
