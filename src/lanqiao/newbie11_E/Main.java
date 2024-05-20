@@ -8,9 +8,19 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		char[] c1 = sc.next().toCharArray();
-		char[] c2 = Arrays.copyOf(c1,c1.length);
-		Arrays.sort(c1,new Comparator<char>().reversed());
-		sc.close();
+		char[] c = sc.next().toCharArray();
+		Arrays.sort(c);
+		StringBuilder sb = new StringBuilder(new String(c)).reverse();
+		if(c[0]=='0') {
+			for(int i = 1;i<c.length;i++) {
+				if(c[i]!='0') {
+					char t = c[i];
+					c[i] = c[0];
+					c[0] = t;
+					break;
+				}
+ 			}
+		}
+		System.out.println(sb+" "+new String(c));
 	}
 }
