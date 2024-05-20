@@ -1,4 +1,4 @@
-package greety7;
+package greety07;
 
 
 import java.util.Arrays;
