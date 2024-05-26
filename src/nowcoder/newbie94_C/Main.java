@@ -3,7 +3,7 @@ package newbie94_C;
 import java.util.Scanner;
 
 public class Main {
-	//前缀和
+	//前缀和**一定要开long**
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
